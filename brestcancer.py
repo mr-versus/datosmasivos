@@ -1,6 +1,12 @@
-data = read.csv("breastcancer.csv")
+# Leer el archivo csv y graficar los datos
+import pandas as pd
+import matplotlib.pyplot as plt
 
-plot(data, col = "diagnosis", pch = 19, cex = 2)
+# Leer el archivo CSV
+data = pd.read_csv('breastcancer.csv')
 
-dev.copy(jpeg, "plot.jpg")
-dev.off()
+# Graficar los datos de forma simple
+data.plot()
+
+# Guardar la gráfica en un archivo png
+plt.savefig('breastcancer.png')
